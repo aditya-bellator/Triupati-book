@@ -1,0 +1,169 @@
+@import '../../styles/base.scss';
+
+
+.sidebarWrapper {
+
+  :global(.accordion) {
+
+    // background-color: $black;
+    :global(.accordion-item) {
+      border-radius: 0;
+      border: 0;
+
+      :global(.accordion-body) {
+        padding: 0;
+
+        ul {
+          li {
+            a {
+              @include font-size(14px);
+              @include padding(2px 15px);
+              background-color: $gray-b;
+              display: flex;
+              align-items: center;
+              color: $black;
+              border-bottom: 1px solid $gray-900;
+            }
+
+            &:last-child {
+              a {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+
+      h2 {
+        button {
+          @include padding(5px);
+          background-color: $branding1;
+          border-radius: 0 !important;
+          color: $white;
+          box-shadow: none;
+
+          &::after {
+            color: $white;
+            background: url(../../assets/png/down-arrow.png) no-repeat center right;
+            background-size: 12px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.firstParent {
+  @include font-size(14px);
+  @include padding(2px 15px);
+  background-color: $gray-b;
+  display: flex;
+  align-items: center;
+  color: $black;
+  border-bottom: 1px solid $gray-900;
+
+  span:first-child {
+    position: relative;
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+      content: '+';
+    }
+
+    &.active {
+      content: '-';
+    }
+  }
+}
+
+.treeNode {
+  position: relative;
+
+  .nodeToogle {
+    @include font-size(14px);
+    @include padding(2px 15px);
+    background-color: $gray-b;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $black;
+    border-bottom: 1px solid $gray-900;
+
+    span {
+      position: relative;
+      margin-right: 5px;
+      width: 14px;
+      height: 14px;
+      border: 2px solid $black;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      position: relative;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:after {
+        content: '+';
+        line-height: 1;
+        // height: 2px;
+        // width: 8px;
+        // background-color: $black;
+      }
+
+      // &::before {
+      //   content: '';
+      //   height: 8px;
+      //   width: 2px;
+      //   background-color: $black;
+      //   position: absolute;
+      //   left: 4px;
+      //   top: 1px;
+      // }
+
+      &.active {
+        &:after {
+          content: '-';
+          // height: 2px;
+          // width: 8px;
+          // background-color: $black;
+        }
+
+        // &::before{
+        //   display: none;
+        // }
+      }
+    }
+  }
+
+  .childNodes {
+    >li {
+      .treeNode {
+        .nodeToogle {
+          @include padding-left(25px);
+        }
+
+        .childNodes {
+          >li {
+            .treeNode {
+              .nodeToogle {
+                @include padding-left(35px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    li {
+      margin: 0;
+    }
+  }
+}

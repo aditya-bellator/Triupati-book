@@ -1,0 +1,127 @@
+@import '../../styles/base.scss';
+
+
+.place {
+    width: 100px;
+    height: 30px;
+}
+
+.background {
+    background-color: #ff9cb8;
+    @include padding(10px 8px);
+
+    .w-10 {
+        background-color: #2d3c51;
+        width: 30px;
+        line-height: 30px;
+    }
+
+    .btn-edit {
+        background-color: #017a95;
+        color: #fff;
+
+        &:hover {
+            background-color: #017a95;
+            color: #fff;
+
+        }
+    }
+
+    h6 {
+        width: 100%;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .bg-dark-1.place {
+        background: #2d3c51;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-prime {
+        background: #097dc6;
+        color: white;
+        font-weight: 600;
+
+    }
+}
+
+.backgroundBack {
+    background-color: #097dc6;
+    @include padding(10px 8px);
+
+    .w-10 {
+        background-color: #2d3c51;
+        width: 30px;
+        line-height: 30px;
+    }
+
+    .btn-edit {
+        background-color: #017a95;
+        color: #fff;
+
+        &:hover {
+            background-color: #017a95;
+            color: #fff;
+
+        }
+    }
+
+    h6 {
+        width: 100%;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .bg-dark-1.place {
+        background: #2d3c51;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-prime {
+        background: #097dc6;
+        color: white;
+        font-weight: 600;
+
+    }
+}
+
+.bet-mobile {
+
+    .modal-header {
+        background: #097dc6;
+    }
+
+    .modal-content {
+        border-radius: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+        display: none !important;
+    }
+}
+
+.bet-mobileBack {
+
+    .modal-header {
+        background: #ff9cb8;
+    }
+
+    .modal-content {
+        border-radius: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+        display: none !important;
+    }
+}

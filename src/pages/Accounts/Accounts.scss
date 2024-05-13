@@ -1,0 +1,184 @@
+@import "../../styles/base.scss";
+
+.report-page .card {
+  margin-bottom: 10px;
+}
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.custom-pagination>div {
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  position: relative;
+  border: 1px solid #dee2e6;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -ms-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: 38px;
+  line-height: 26px;
+}
+
+.custom-pagination>div:first-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.custom-pagination>div:nth-child(4n) {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.custom-pagination>div:last-child {
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-pagination>div[disabled] {
+  cursor: not-allowed;
+}
+
+.custom-pagination>div:last-child input {
+  width: 100px;
+}
+
+.account-page {
+
+  .liveEvents,
+  .customLinks {
+    display: none;
+  }
+}
+
+.report-page {
+  .table-responsive {
+    min-height: calc(100vh - 350px);
+  }
+
+  .table td,
+  .table th {
+    @include padding(6px 12px);
+    @include font-size(16px);
+    background: #f7f7f7;
+
+    @include media-breakpoint-down(xl) {
+      @include padding(5px 7px);
+      @include font-size(12px);
+      white-space: nowrap;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .table {
+      thead {
+        th {
+          background-color: $branding2;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .live-unsattled {
+    min-height: calc(100vh - 350px);
+  }
+
+  .live-unsattled .table-responsive {
+    min-height: unset;
+  }
+
+  .btn,
+  .form-control,
+  .form-select {
+    height: 38px;
+  }
+
+
+  .input-group span {
+    display: flex;
+    align-items: center;
+  }
+
+  .round-id {
+    width: 150px;
+  }
+
+  .report-table-title {
+    background: var(--bg-secondary70);
+    color: var(--text-secondary);
+    padding: 5px;
+  }
+
+  .report-date {
+    width: 170px;
+  }
+
+  .report-sr {
+    width: 70px;
+  }
+
+  .report-amount {
+    width: 100px;
+  }
+
+  .report-sport {
+    width: 170px;
+  }
+
+  .report-action {
+    width: 50px;
+  }
+
+  .report-type {
+    width: 150px;
+  }
+
+  .report-id {
+    width: 170px;
+  }
+
+  .game-name {
+    width: 200px;
+  }
+
+
+}
+
+
+.report-form {
+  color: $black;
+
+  input {
+    color: $black;
+  }
+
+  .form-control::-ms-input-placeholder {
+    /* Edge 12-18 */
+    color: $black;
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+
+  .form-select {
+    color: $black;
+  }
+
+  .form-control::placeholder {
+    color: $black;
+  }
+
+  button {
+    width: 100%;
+  }
+}

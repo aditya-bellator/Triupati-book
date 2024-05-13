@@ -1,0 +1,43 @@
+@import '../../styles/base.scss';
+
+
+.btn {
+    background: transparent;
+    border: 1px solid #eee;
+    @include padding(6px 12px);
+    line-height: 1.5;
+    font-family: "Roboto Condensed", sans-serif;
+    border-radius: 4px;
+    @include font-size(16px);
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+
+    svg {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+    }
+
+    &.primary-btn {
+        background-color: $branding1;
+        color: #fff;
+        border-color: $branding1;
+
+        &:first-child:active,
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $branding1;
+            border-color: $branding1;
+            color: $white;
+        }
+
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: 0.85;
+    }
+}

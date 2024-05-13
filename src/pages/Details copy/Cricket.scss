@@ -1,0 +1,1411 @@
+@import "../../../src/styles/base.scss";
+
+.detail-page {
+  display: flex;
+  flex-wrap: wrap;
+
+  .moving-text {
+    @include padding(0 5px);
+    color: $green-lt;
+    font-weight: bold;
+    @include font-size(12px);
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .center-container {
+    width: calc(100% - 452px);
+    padding-bottom: 10px;
+
+    @include media-breakpoint-between(xl, xxl) {
+      width: calc(100% - 352px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: calc(100% - 402px);
+    }
+
+    @include media-breakpoint-down(xl) {
+      width: 100%;
+    }
+
+    .detail-page-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-content: flex-start;
+      @include padding-right(4px);
+
+      .nav-tabs {
+        display: flex;
+        border: none;
+        background-color: $branding1;
+
+        .nav-item {
+          flex: auto;
+          @include padding(10px 0px);
+
+          button {
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            text-transform: uppercase;
+            @include padding(0 8px);
+            font-weight: bold;
+            color: $white;
+            border-right: 1px solid $white;
+            border-radius: 0;
+            position: relative;
+
+            &.active {
+
+              &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background: $gray-c;
+                left: 0;
+                top: -13px;
+              }
+
+            }
+          }
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        @include padding-right(0);
+        overflow: hidden;
+
+        .tab-content {
+          .tab-pane {
+            overflow: auto;
+          }
+        }
+      }
+
+      .iframe-container {
+        width: 100%;
+
+        iframe {
+          width: 100%;
+        }
+      }
+
+      .game-header {
+        background-color: $branding2;
+        color: $white;
+        @include padding(5px 10px);
+        @include font-size(15px);
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        span {
+          span {
+            @include font-size(12px);
+            font-weight: normal;
+            text-decoration: underline;
+            text-transform: none;
+            cursor: pointer;
+          }
+        }
+
+        .round-id {
+          @include font-size(12px);
+          font-weight: normal;
+          text-transform: none;
+        }
+
+        @include media-breakpoint-down(xl) {
+          @include margin-top(8px);
+        }
+
+        @include media-breakpoint-down(md) {
+          font-size: 12px;
+          margin: 0;
+          width: 100%;
+        }
+      }
+
+      .scorecard {
+        width: 100%;
+        @include padding(5px);
+        background-image: url("../../assets/png/scorecard-bg.png");
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $white;
+        z-index: 1;
+
+        &:before {
+          content: "";
+          background-color: rgba(0, 0, 0, 0.55);
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+      }
+
+      .ball-runs {
+        display: inline-block;
+        height: 25px;
+        line-height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        font-size: var(--font-small);
+        background-color: #08c;
+        color: #fff;
+        text-align: center;
+        margin-right: 4px;
+      }
+
+      .ball-runs.four {
+        background-color: $green;
+      }
+
+      .ball-runs.six {
+        background-color: $purple;
+      }
+
+      .ball-runs.wicket {
+        background-color: red;
+      }
+
+      .scorestats {
+        height: 250px;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+      }
+
+      .scorestats iframe {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
+
+    }
+
+  }
+
+  .right-sidebar {
+    width: 450px;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: 2px;
+
+    &.active {
+      position: fixed;
+      top: 0;
+      right: 5px;
+    }
+
+    @include media-breakpoint-between(xl, xxl) {
+      width: 350px;
+    }
+
+
+    @include media-breakpoint-up(xxl) {
+      width: 400px;
+
+    }
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+
+      &.active {
+        position: static;
+      }
+    }
+  }
+}
+
+.game-market {
+  background: $xlt-gray;
+  color: $dark-gray;
+  @include margin-top(8px);
+}
+
+.market-title {
+  background-color: $blue-v;
+  color: $white;
+  @include padding(5px 10px);
+  @include font-size(15px);
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  span {
+    display: inline-block;
+    max-width: calc(100% - 30px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.market-rules {
+  cursor: pointer;
+}
+
+.market-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  border-bottom: 0.01em solid $gray-c;
+
+  .market-nation-detail {
+    .market-nation-name {
+      @include font-size(12px);
+      color: $green-lt;
+      font-weight: bold;
+    }
+  }
+
+  .market-odd-box {
+    min-height: 28px;
+
+    b {
+      font-size: 16px;
+    }
+  }
+}
+
+.market-row {
+  border-bottom: 0.01em solid $gray-c;
+  background-color: #f2f2f2;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.fancy-market {
+  border-bottom: 1px solid $green-lt;
+
+  .market-row {
+    border-bottom: 0;
+  }
+}
+
+.market-nation-detail {
+  width: calc(100% - 480px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 5px;
+  font-size: 14px;
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: calc(100% - 330px);
+    @include font-size(13px);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: calc(100% - 360px);
+  }
+
+  @include media-breakpoint-down(md) {
+    width: calc(100% - 210px);
+  }
+
+  .market-nation-name {
+    font-weight: 400;
+    max-width: 100%;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+
+    a {
+      color: $dark-gray;
+    }
+  }
+}
+
+.market-odd-box {
+  width: 80px;
+  padding: 2px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-left: 1px solid $gray-c;
+  cursor: pointer;
+  min-height: 44px;
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: 55px;
+  }
+
+
+  @include media-breakpoint-up(xxl) {
+    width: 60px;
+  }
+
+  @include media-breakpoint-between(md, xl) {
+    width: 60px;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 20%;
+    padding: 2px 0;
+  }
+
+  .market-odd {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    line-height: 1;
+
+    @include media-breakpoint-down(md) {
+      font-size: 15px;
+    }
+  }
+
+  .market-volume {
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 1;
+
+    @include media-breakpoint-down(md) {
+      font-size: 11px;
+    }
+  }
+}
+
+.fancy-min-max-box {
+  width: 80px;
+  padding: 0 5px;
+  text-align: right;
+
+
+  @include media-breakpoint-between(xl, xxl) {
+    width: 55px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 60px;
+  }
+
+  @include media-breakpoint-between(md, xl) {
+    width: 60px;
+  }
+
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.market-nation-book {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+
+  .market-book {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .market-live-book {
+    font-size: 12px;
+    font-weight: 400;
+    flex: 1;
+    text-align: right;
+  }
+}
+
+.market-remark {
+  padding: 0 5px;
+  color: $dark-gray;
+  font-weight: bold;
+  font-size: 12px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.fancy-min-max {
+  font-size: 12px;
+  font-weight: bold;
+  color: $green-lt;
+  word-break: break-all;
+
+  @include media-breakpoint-up(xxl) {
+    @include font-size(11px);
+  }
+}
+
+.market-1 {
+  min-width: 100%;
+
+  .market-row {
+    .market-1-item {
+      padding: 2px 0 2px 16px;
+      display: flex;
+      display: -webkit-flex;
+      flex: 1 1 auto;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 33.33%;
+      max-width: 50%;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.market-2 {
+  min-width: calc(33.33% - 8px);
+  max-width: 100%;
+  flex: 1;
+  width: calc(50%);
+
+  .market-nation-detail {
+    width: calc(100% - 160px);
+
+    @include media-breakpoint-up(xxl) {
+      width: calc(100% - 120px);
+    }
+  }
+
+  .suspended-row {
+    &::after {
+      width: 160px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+      }
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 160px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.market-2.width30 {
+  min-width: calc(30%);
+  max-width: calc(100%);
+
+  .market-nation-detail {
+    width: calc(100% - 160px);
+
+    @include media-breakpoint-between(xl, xxl) {
+      width: calc(100% - 110px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: calc(100% - 120px);
+    }
+
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 40%);
+    }
+
+    .market-nation-name {
+      font-weight: bold;
+    }
+  }
+
+  .suspended-row {
+    &::after {
+      width: 160px;
+
+      @include media-breakpoint-between(xl, xxl) {
+        width: 110px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 40%;
+      }
+
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 160px;
+
+      @include media-breakpoint-between(xl, xxl) {
+        width: 110px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.market-3 {
+  min-width: calc(50%);
+  max-width: calc(100%);
+  flex: 1;
+
+  .market-nation-detail {
+    width: calc(100% - 320px);
+
+    .market-nation-name {
+      font-weight: bold;
+    }
+  }
+
+  .suspended-row {
+    &::after {
+      width: 320px;
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 320px;
+    }
+  }
+}
+
+.market-4 {
+  min-width: calc(100%);
+  flex: 1;
+  max-width: calc(100%);
+
+  .market-header .market-nation-detail {
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 48%);
+    }
+  }
+
+  .market-odd-box {
+    @include media-breakpoint-down(md) {
+      width: 12%;
+    }
+  }
+
+  .market-nation-detail {
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 72%);
+    }
+
+    .market-nation-name {
+      font-weight: bold;
+    }
+  }
+
+  .suspended-row {
+    &:after {
+      width: 480px;
+
+      @include media-breakpoint-between(xl, xxl) {
+        width: 330px;
+        @include font-size(14px);
+      }
+
+      @include media-breakpoint-up(xxl) {
+        width: 360px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 72%;
+      }
+    }
+  }
+
+  .suspended-table {
+    &:after {
+      width: 480px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 360px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 72%;
+      }
+    }
+  }
+}
+
+.market-13 {
+  min-width: calc(100%);
+  flex: 1;
+  max-width: calc(100%);
+
+  .market-odd-box {
+    @include media-breakpoint-down(md) {
+      width: 12%;
+    }
+  }
+
+  .market-nation-detail {
+    .market-nation-name {
+      font-weight: bold;
+    }
+  }
+
+  .back1 {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .back2 {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .lay1 {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .lay2 {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.market-4.width70 {
+  min-width: calc(70%);
+  max-width: calc(100%);
+}
+
+.market-5 {
+  min-width: calc(100%);
+  flex: 1;
+
+  .market-nation-detail {
+    width: calc(100% - 320px);
+  }
+
+  .suspended-row {
+    &::after {
+      width: 160px;
+      right: 160px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+        right: 120px;
+      }
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 160px;
+      right: 160px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+        right: 120px;
+      }
+    }
+  }
+}
+
+.rules-section .rules-highlight {
+  color: $branding1 !important;
+  font-weight: bold;
+  font-size: 18px !important;
+}
+
+.market-6 {
+  min-width: calc(100%);
+  max-width: calc(100%);
+  flex: 1;
+
+  .market-nation-detail {
+    width: calc(100% - 240px);
+
+    @include media-breakpoint-between(xl, xxl) {
+      width: calc(100% - 165px);
+    }
+
+    @include media-breakpoint-between(md, xl) {
+      width: calc(100% - 180px);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: calc(100% - 180px);
+    }
+
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 40%);
+    }
+
+    .market-nation-name {
+      white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      max-width: calc(100% - 50px);
+    }
+  }
+
+  .suspended-row {
+    &::after {
+      width: 240px;
+
+
+      @include media-breakpoint-between(xl, xxl) {
+        width: 165px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        width: 180px;
+      }
+
+
+      @include media-breakpoint-between(md, xl) {
+        width: 180px;
+      }
+
+
+      @include media-breakpoint-down(md) {
+        width: 40%;
+      }
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 240px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 180px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.market-9 {
+  min-width: calc(50%);
+  max-width: calc(100%);
+  flex: 1;
+
+  .market-nation-detail {
+    width: calc(100% - 80px);
+
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 20%);
+    }
+  }
+
+  .suspended-row {
+    &::after {
+      width: 80px;
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 80px;
+    }
+  }
+
+  .suspended-box {
+    &::after {
+      width: 80px;
+      left: unset;
+      right: 0;
+    }
+
+    &::before {
+      width: 80px;
+      left: unset;
+      right: 0;
+    }
+  }
+}
+
+.market-10 {
+  min-width: calc(50%);
+  max-width: calc(100%);
+  flex: 1;
+
+  .market-nation-detail {
+    width: calc(100% - 160px);
+  }
+
+  .suspended-row {
+    &::after {
+      width: 160px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+      }
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 160px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.market-11 {
+  min-width: calc(50%);
+  max-width: calc(100%);
+  flex: 1;
+  width: calc(50%);
+
+  .market-nation-detail {
+    width: calc(100% - 160px);
+  }
+
+  .suspended-row {
+    &::after {
+      width: 160px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+      }
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 160px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 120px;
+      }
+    }
+  }
+}
+
+.market-12 {
+  min-width: calc(100%);
+  flex: 1;
+  max-width: calc(100%);
+
+  .market-nation-detail {
+    .form-check {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-top: 0;
+        height: 16px;
+        width: 16px;
+      }
+
+      label {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        >div {
+          &:first-child {
+            text-align: center;
+            line-height: normal;
+            margin-right: 5px;
+            display: inline-block;
+            width: 25px;
+          }
+
+          &:last-child {
+            width: calc(100% - 70px);
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+
+    label {
+      img {
+        height: 25px;
+        margin-right: 5px;
+      }
+
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .market-nation-name {
+      font-weight: bold;
+      width: calc(100% - 50px);
+    }
+  }
+
+  .jockey-detail {
+    .jockey-detail-box {
+
+      color: $dark-gray;
+      padding: 0 3px;
+      margin-right: 5px;
+      font-size: 13px;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+    }
+  }
+
+  .suspended-row {
+    &::after {
+      width: 480px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 360px;
+      }
+    }
+  }
+
+  .suspended-table {
+    &::after {
+      width: 480px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 360px;
+      }
+    }
+  }
+
+  .suspended-row.removed {
+    &::after {
+      color: $white;
+    }
+  }
+
+  .market-odd-box {
+    min-height: 48px;
+  }
+
+  .market-book {
+    width: 50px;
+    text-align: right;
+  }
+
+  .market-header {
+    .market-odd-box {
+      min-height: unset;
+    }
+  }
+}
+
+
+.right-sidebar {
+
+  .accordion {
+
+    // background-color: $black;
+    .accordion-item {
+      border-radius: 0;
+      border: 0;
+      margin-bottom: 5px;
+
+      .accordion-body {
+        padding: 0;
+
+        ul {
+          li {
+            a {
+              @include font-size(14px);
+              @include padding(2px 15px);
+              background-color: $gray-b;
+              display: flex;
+              align-items: center;
+              color: $black;
+              border-bottom: 1px solid $gray-900;
+            }
+
+            &:last-child {
+              a {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+
+      h2 {
+        button {
+          @include padding(5px);
+          background-color: $branding2;
+          border-radius: 0 !important;
+          color: $white;
+          box-shadow: none;
+
+          &::after {
+            color: $white;
+            background: url(../../assets/png/down-arrow.png) no-repeat center right;
+            background-size: 12px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.details-page {
+
+  .customLinks,
+  .liveEvents {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(md) {
+
+  .market-1,
+  .market-2,
+  .market-2.width30,
+  .market-3,
+  .market-4,
+  .market-4.width70,
+  .market-5,
+  .market-6,
+  .market-9,
+  .market-10,
+  .market-11,
+  .market-12,
+  .market-13 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .details-page .content {
+    padding: 0;
+  }
+}
+
+.ball-by-ball {
+
+  .rules-section {
+    @include padding(20px);
+  }
+
+  .market-6 {
+    .market-nation-detail {
+      .market-nation-name {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .casino-remark {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    background-color: var(--bg-success);
+    color: white;
+    border-radius: 0;
+    height: 32px;
+    width: 100%;
+    background-color: $green;
+    overflow: hidden;
+  }
+
+  .casino-remark .remark-icon {
+    width: 50px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    background-color: $green;
+  }
+
+  .casino-remark .remark-icon img {
+    height: 20px;
+  }
+
+  .moving-text-wrap {
+    width: calc(100% - 50px);
+    overflow: hidden;
+    padding-left: 10px;
+    display: inline-flex;
+  }
+
+  .moving-text {
+    font-weight: bold;
+    font-size: 12px;
+    color: $white;
+  }
+
+  .casino-last-result-title {
+    @include padding(10px);
+    background-color: $blue-v;
+    color: $white;
+    @include font-size(14px);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .casino-last-result-title a {
+    color: $white;
+  }
+
+  .casino-last-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .casino-last-results .result {
+    background: #355e3b;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+}
+
+
+.casino-last-results .result.result-b {
+  color: $yellow;
+}
+
+@include media-breakpoint-down(md) {
+  .ball-by-ball .market-6 .blb-box {
+    width: 20%;
+  }
+
+  .ball-by-ball .fancy-min-max-box {
+    display: flex;
+    width: 20%;
+  }
+
+  .ball-by-ball .market-6 .blb-box .market-odd-box {
+    width: 100%;
+  }
+}
+
+.casino-result-round-id {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cricket20ballresult {
+  position: relative;
+  width: auto;
+  left: unset;
+  top: unset;
+  margin: 0;
+  display: inline-block;
+  animation: none;
+}
+
+.cricket20ballpopup img {
+  width: 150px;
+}
+
+.cricket20ballpopup span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.place-bet-box-header {
+  background-color: $gray-c;
+  color: $black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.place-bet-box-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 8px 5px;
+  color: $black;
+  font-size: 14px;
+  border-bottom: 1px solid $gray-c;
+}
+
+.place-bet-for {
+  width: calc(100% - 230px);
+  display: flex;
+  align-items: center;
+  line-height: normal;
+}
+
+.lottery-sidebar .place-bet-for {
+  width: calc(100% - 90px);
+}
+
+.place-bet-for span {
+  max-width: calc(100% - 30px);
+  font-weight: bold;
+}
+
+.place-bet-odds {
+  width: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.place-bet-odds input {
+  width: calc(100% - 20px);
+}
+
+.place-bet-stake {
+  width: 80px;
+  margin-left: 10px;
+}
+
+.place-bet-stake input {
+  width: 80px;
+}
+
+.place-bet-profit {
+  width: 80px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.place-bet-box-body i {
+  font-size: 12px;
+}
+
+.place-bet-box-body input {
+  height: 24px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  font-size: 12px;
+  padding: 5px;
+  border: 0;
+}
+
+.place-bet-box-body .btn-default {
+  height: 12px;
+  line-height: 12px;
+  min-width: 20px;
+  width: 20px;
+  vertical-align: top;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border: 0;
+  background-color: $gray-c;
+  color: $black;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.place-bet-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 10px 5px 10px;
+}
+
+.place-bet-buttons .btn-place-bet {
+  width: 19%;
+  padding: 5px;
+  background-color: $gray-c !important;
+  color: $black !important;
+  border: 0;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.place-bet-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px 5px 10px;
+}
+
+.place-bet-action-buttons .btn {
+  min-width: 80px;
+
+  &.btn-info {
+    background-color: $green-lt;
+    color: #fff;
+    border-color: $green-lt;
+
+    &:hover {
+      background-color: $green-lt;
+      color: #fff;
+      border-color: $green-lt;
+    }
+  }
+}

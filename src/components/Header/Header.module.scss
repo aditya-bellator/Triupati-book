@@ -1,0 +1,192 @@
+@import '../../styles/base.scss';
+
+.header {
+  background-color: $branding1;
+  color: $white;
+  @include padding(7px 15px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  @include media-breakpoint-down(xl) {
+    @include padding(10px 5px);
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .searchBoxContainer {
+    width: 100%;
+  }
+
+  .logo {
+    img {
+      max-height: 65px;
+      max-width: 250px;
+
+      @include media-breakpoint-down(xl) {
+        max-height: 35px;
+        max-width: 120px;
+      }
+    }
+
+    a {
+      color: $white;
+      @include font-size(20px);
+    }
+  }
+
+  .userDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-up(xl) {
+      @include margin-top(-10px)
+    }
+  }
+}
+
+.rules {
+  cursor: pointer;
+
+  @include media-breakpoint-down(xl) {
+    display: none;
+  }
+}
+
+.news {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  width: 50%;
+  @include font-size(14px);
+  overflow: hidden;
+  text-wrap: nowrap;
+  font-style: italic;
+
+  @include media-breakpoint-down(xl) {
+    @include font-size(12px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: unset;
+    @include margin-top(5px);
+  }
+}
+
+.userBalance {
+  line-height: 20px;
+
+  @include media-breakpoint-down(xl) {
+    text-align: right;
+
+    >div:last-child {
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown {
+      display: inline-block;
+      @include margin-left(5px);
+
+      a {
+        color: $white;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.userDropdown {
+  &::after {
+    display: none !important;
+  }
+
+  button {
+    background: none !important;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    color: $white !important;
+
+    @include media-breakpoint-down(xl) {
+      @include font-size(14px);
+    }
+
+    &::after {
+      display: none;
+    }
+
+    svg {
+      position: static;
+    }
+
+    &:hover {
+      background: none;
+      border: none;
+      box-shadow: none;
+      opacity: 1;
+
+    }
+  }
+
+  :global(.dropdown-menu) {
+    :global(.dropdown-item) {
+      @include padding(4px 16px);
+      line-height: 20px;
+      background: none;
+      color: $black;
+
+      &:hover {
+        background: none;
+        text-decoration: underline;
+        color: $gray-600;
+      }
+    }
+  }
+}
+
+.searchBox {
+  display: flex;
+
+  @include media-breakpoint-down(xl) {
+    @include margin-top(5px);
+  }
+
+  svg {
+    @include font-size(24px);
+    cursor: pointer;
+    @include margin-left(10px);
+  }
+
+  span {
+    cursor: pointer;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  input {
+    width: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .active {
+    input {
+      width: 270px;
+      transition: width 0.4s linear;
+      -webkit-transition: width 0.4s linear;
+      -moz-transition: width 0.4s linear;
+      -ms-transition: width 0.4s linear;
+      -o-transition: width 0.4s linear;
+      @include padding(6px 12px);
+      box-shadow: 0 0 5px $gray-600;
+    }
+  }
+}

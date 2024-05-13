@@ -1,0 +1,44 @@
+@import '../../styles/base.scss';
+
+.authWrapper {
+  min-height: 100vh;
+  background-image: linear-gradient($branding1, $branding2);
+}
+
+.supportBar {
+  background-color: $branding1;
+  @include padding(10px);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: $white;
+  text-align: center;
+
+  span {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    width: 40px;
+    display: inline-flex;
+    height: 40px;
+    background-color: $white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+
+    img {
+      height: 30px;
+      width: auto;
+    }
+  }
+
+}
+
+.bottomIcons {
+  img {
+    max-width: 100px;
+    margin-right: 10px;
+    max-height: 30px;
+  }
+}

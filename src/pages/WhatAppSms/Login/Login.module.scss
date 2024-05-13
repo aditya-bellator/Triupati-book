@@ -1,0 +1,78 @@
+@import '../../../styles/base.scss';
+
+.loginWrapper {
+  max-width: 380px;
+  @include padding(30px 15px);
+  margin: 0 auto;
+
+  .logo {
+    text-align: center;
+
+    img {
+      max-height: 140px;
+      max-width: 63%;
+    }
+  }
+
+  form {
+    @include margin-top(24px);
+    @include padding(20px);
+    border-radius: 4px;
+    background: $white;
+    box-shadow: 0 0 5px #fff;
+  }
+
+  .formHeading {
+    color: $branding1;
+    @include font-size(22px);
+    text-align: center;
+    text-transform: uppercase;
+    @include margin-bottom(10px);
+  }
+}
+
+.formRow {
+  @include margin-bottom(24px);
+}
+
+.inputGroup {
+  display: flex;
+
+  >div {
+
+    flex-grow: 1;
+  }
+
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+  }
+
+  .inputGroupText {
+    width: 40px;
+    background-color: $gray-e;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $gray-d;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+  }
+}
+
+.btnRow {
+  @include margin-top(8px);
+
+  button {
+    width: 100%;
+  }
+}
+
+.smallText {
+  @include font-size(10px);
+  @include margin-top(8px);
+  text-align: center;
+}

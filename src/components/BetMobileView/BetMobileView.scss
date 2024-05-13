@@ -1,0 +1,91 @@
+@import '../../styles/base.scss';
+
+.tabsGroup {
+
+  .nav-tabs {
+    @include margin(0 -5px 5px);
+    width: calc(100% + 10px);
+
+    @include media-breakpoint-down(xl) {
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+      overflow-x: auto;
+
+      li {
+        flex: none;
+      }
+    }
+  }
+
+  .nav-tabs {
+    border: none;
+
+    .nav-item {
+      margin: 0;
+
+      button {
+        background-color: $gray-c;
+        color: $black;
+        border-radius: 0;
+        border: none;
+        @include font-size(16px);
+        text-align: center;
+        line-height: 1;
+        cursor: pointer;
+
+        &.active {
+          color: $white;
+          background-color: $branding2;
+        }
+
+        @include media-breakpoint-down(xl) {
+          background: none;
+          color: $white;
+          border-color: $branding2;
+          @include font-size(12px);
+          @include padding(8px 16px);
+          font-weight: bold;
+          text-transform: uppercase;
+
+          &.active {
+            background-color: $blue-lt;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.bet-button {
+
+  padding: 5px;
+  background-color: #202020 !important;
+  color: #fff !important;
+  border: 0;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

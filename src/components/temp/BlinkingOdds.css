@@ -1,0 +1,18 @@
+.odds {
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .blinking {
+    animation: blink-animation 1s infinite alternate;
+  }
+  
+  @keyframes blink-animation {
+    from {
+      background-color: transparent;
+    }
+    to {
+      background-color: yellow; /* Adjust the background color as needed */
+    }
+  }
+  

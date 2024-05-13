@@ -1,0 +1,12 @@
+.btn-style {
+    background: rgb(104, 104, 190);
+    padding: 3px 3px;
+}
+
+.btn-style button {
+    padding: 2px 2px;
+    background-color: blue;
+    border: 1px solid blue;
+    color: white;
+    border-radius: 8px;
+}

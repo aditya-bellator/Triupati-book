@@ -1,0 +1,105 @@
+@import '../../styles/base.scss';
+
+
+.supportBar {
+  background-color: $branding1;
+  @include padding(10px);
+  position: relative;
+  color: $white;
+  text-align: center;
+  overflow: hidden;
+
+  h2 {
+
+    @include media-breakpoint-down(md) {   
+      @include margin-top(5px);
+      @include font-size(20px)
+    }
+  }
+
+  span {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    width: 40px;
+    display: inline-flex;
+    height: 40px;
+    background-color: $white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+
+    @include media-breakpoint-down(md) {
+      position: static;
+      margin-top: 15px;
+      height: 30px;
+      width: 30px;
+    }
+
+    img {
+      height: 30px;
+      width: auto;
+
+      @include media-breakpoint-down(md) {
+        height: 20px;
+      }
+    }
+  }
+
+}
+
+.footerBottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  @include padding(10px);
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+  }
+}
+
+.secureLogo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+  padding-left: 100px;
+  // padding-right: 150px;
+
+  img {
+    max-width: 100px;
+    margin-right: 10px;
+    max-height: 50px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0px;
+  }
+}
+
+.bottomIcons {
+  img {
+    max-width: 100px;
+    margin-right: 10px;
+    max-height: 30px;
+  }
+}
+
+
+.socialMIcon {
+  cursor: pointer;
+}
+
+
+.copyRight {
+  margin-right: 50px;
+}
+
+.h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 7px;
+}

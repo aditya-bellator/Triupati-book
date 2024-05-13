@@ -1,0 +1,144 @@
+// @import '../../styles/base.scss';
+
+// .tabsGroup {
+
+//   :global(.nav-tabs) {
+//     @include margin(0 0 5px);
+//     // width: calc(100% + 10px);
+//     background-color: $branding2;
+//     overflow: hidden;
+//     flex-wrap: nowrap;
+//     overflow-y: hidden;
+//     overflow-x: auto;
+
+//     @include media-breakpoint-down(xl) {
+//       flex-wrap: nowrap;
+//       overflow-y: hidden;
+//       overflow-x: auto;
+
+//       li {
+//         flex: none;
+//       }
+//     }
+//   }
+
+//   :global(.nav-tabs) {
+//     :global(.nav-item) {
+//       button {
+//         background-color: $gray-c;
+//         color: $black;
+//         border-radius: 0;
+//         border: none;
+//         border-right: 1px solid $branding2;
+//         @include font-size(16px);
+//         text-align: center;
+//         line-height: 1;
+//         cursor: pointer;
+//         white-space: nowrap;
+
+//         i {
+//           font-size: 15px;
+//           margin-bottom: 5px;
+//           display: block;
+//         }
+
+//         &:global(.active) {
+//           color: $white;
+//           background-color: $branding2;
+//         }
+
+//         @include media-breakpoint-down(xl) {
+//           background: none;
+//           color: $white;
+//           border-color: $branding2;
+//           @include font-size(12px);
+//           @include padding(8px 16px);
+//           font-weight: bold;
+//           text-transform: uppercase;
+
+//           &:global(.active) {
+//             background-color: $blue-lt;
+//             color: $white;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .liveEventWrapper {
+//   background-color: $branding1;
+// }
+
+
+@import '../../styles/base.scss';
+
+.tabsGroup {
+
+  :global(.nav-tabs) {
+    @include margin(0 0 5px);
+    // width: calc(100% + 10px);
+    background-color: $branding2;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    @include media-breakpoint-down(xl) {
+      flex-wrap: nowrap;
+      overflow-y: hidden;
+      overflow-x: auto;
+
+      li {
+        flex: none;
+      }
+    }
+  }
+
+  :global(.nav-tabs) {
+    :global(.nav-item) {
+      button {
+        background-color: $gray-c;
+        color: $black;
+        border-radius: 0;
+        border: none;
+        border-right: 1px solid $branding2;
+        @include font-size(16px);
+        text-align: center;
+        line-height: 1;
+        cursor: pointer;
+        white-space: nowrap;
+
+        i {
+          font-size: 15px;
+          margin-bottom: 5px;
+          display: block;
+        }
+
+        &:global(.active) {
+          color: $white;
+          background-color: $branding2;
+        }
+
+        @include media-breakpoint-down(xl) {
+          background: none;
+          color: $white;
+          border-color: $branding2;
+          @include font-size(12px);
+          @include padding(8px 16px);
+          font-weight: bold;
+          text-transform: uppercase;
+
+          &:global(.active) {
+            background-color: $blue-lt;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.liveEventWrapper {
+  background-color: $branding1;
+}

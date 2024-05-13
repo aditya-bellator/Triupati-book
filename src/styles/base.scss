@@ -1,0 +1,950 @@
+//font
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+// Abstracts
+@import "~rfs/scss";
+@import './abstracts/variables';
+@import './abstracts/icomoon';
+@import '~bootstrap/scss/bootstrap';
+
+// @font-face {
+//   font-family: "icomoon";
+//   src: url("./a/fonts/icomoon.eot?faj2cf");
+//   src: url("../fonts/icomoon.eot?faj2cf#iefix") format("embedded-opentype"), url("./abstracts/fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.woff?faj2cf") format("woff"), url("../fonts/icomoon.svg?faj2cf#icomoon") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: block;
+// }
+
+@font-face {
+  font-family: "icomoon";
+  src: url('./abstracts/fonts/icomoon.woff2') format('woff2'),
+       url('./abstracts/fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-1:before {
+  content: "\e900";
+}
+
+.icon-2:before {
+  content: "\e901";
+}
+
+.icon-3:before {
+  content: "\e902";
+}
+
+.icon-4:before {
+  content: "\e903";
+}
+
+.icon-5:before {
+  content: "\e904";
+}
+
+.icon-6:before {
+  content: "\e905";
+}
+
+.icon-7:before {
+  content: "\e906";
+}
+
+.icon-8:before {
+  content: "\e907";
+}
+
+.icon-9:before {
+  content: "\e908";
+}
+
+.icon-10:before {
+  content: "\e909";
+}
+
+.icon-11:before {
+  content: "\e90a";
+}
+
+.icon-12:before {
+  content: "\e90b";
+}
+
+.icon-13:before {
+  content: "\e90c";
+}
+
+.icon-14:before {
+  content: "\e90d";
+}
+
+.icon-15:before {
+  content: "\e90e";
+}
+
+.icon-16:before {
+  content: "\e90f";
+}
+
+.icon-17:before {
+  content: "\e910";
+}
+
+.icon-18:before {
+  content: "\e911";
+}
+
+.icon-19:before {
+  content: "\e912";
+}
+
+.icon-20:before {
+  content: "\e913";
+}
+
+.icon-21:before {
+  content: "\e914";
+}
+
+.icon-22:before {
+  content: "\e915";
+}
+
+.icon-23:before {
+  content: "\e916";
+}
+
+.icon-24:before {
+  content: "\e917";
+}
+
+.icon-25:before {
+  content: "\e918";
+}
+
+.icon-26:before {
+  content: "\e919";
+}
+
+.icon-27:before {
+  content: "\e91a";
+}
+
+.icon-28:before {
+  content: "\e91b";
+}
+
+.icon-29:before {
+  content: "\e91c";
+}
+
+.icon-30:before {
+  content: "\e91d";
+}
+
+.icon-31:before {
+  content: "\e91e";
+}
+
+.icon-32:before {
+  content: "\e91f";
+}
+
+.icon-33:before {
+  content: "\e920";
+}
+
+.icon-34:before {
+  content: "\e921";
+}
+
+.icon-35:before {
+  content: "\e922";
+}
+
+.icon-36:before {
+  content: "\e923";
+}
+
+.icon-37:before {
+  content: "\e924";
+}
+
+.icon-38:before {
+  content: "\e925";
+}
+
+.icon-39:before {
+  content: "\e926";
+}
+
+.icon-40:before {
+  content: "\e927";
+}
+
+.icon-41:before {
+  content: "\e928";
+}
+
+.icon-42:before {
+  content: "\e929";
+}
+
+.icon-43:before {
+  content: "\e92a";
+}
+
+.icon-44:before {
+  content: "\e92b";
+}
+
+.icon-46:before {
+  content: "\e92c";
+}
+
+.icon-47:before {
+  content: "\e92d";
+}
+
+.icon-48:before {
+  content: "\e92e";
+}
+
+.icon-49:before {
+  content: "\e92f";
+}
+
+.icon-50:before {
+  content: "\e930";
+}
+
+.icon-51:before {
+  content: "\e931";
+}
+
+.icon-52:before {
+  content: "\e932";
+}
+
+.icon-53:before {
+  content: "\e933";
+}
+
+.icon-54:before {
+  content: "\e934";
+}
+
+.icon-55:before {
+  content: "\e935";
+}
+
+.icon-56:before {
+  content: "\e936";
+}
+
+.icon-57:before {
+  content: "\e937";
+}
+
+.icon-58:before {
+  content: "\e938";
+}
+
+.icon-59:before {
+  content: "\e939";
+}
+
+.icon-60:before {
+  content: "\e93a";
+}
+
+.icon-61:before {
+  content: "\e93b";
+}
+
+.icon-62:before {
+  content: "\e93c";
+}
+
+.icon-63:before {
+  content: "\e93d";
+}
+
+.icon-64:before {
+  content: "\e93e";
+}
+
+.icon-65:before {
+  content: "\e93f";
+}
+
+.icon-66:before {
+  content: "\e940";
+}
+
+.icon-card-cricket:before {
+  content: "\e941";
+}
+
+.icon-game:before {
+  content: "\e942";
+}
+
+.icon-suits:before {
+  content: "\e943";
+}
+
+.icon-tv:before {
+  content: "\e944";
+}
+
+
+body {
+  color: $black;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  @include font-size(16px);
+  cursor: default;
+
+  @include media-breakpoint-down(md) {
+    @include font-size(12px);
+  }
+}
+
+li,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* header CSS */
+* {
+  box-sizing: border-box;
+}
+
+h1,
+.h1 {
+  @include font-size(26px);
+  font-weight: 700;
+  margin: 0
+}
+
+h2,
+.h2 {
+  @include font-size(24px);
+  font-weight: 700;
+  margin: 0
+}
+
+h3,
+.h3 {
+  @include font-size(22px);
+  font-weight: 700;
+  margin: 0
+}
+
+h4,
+.h4 {
+  @include font-size(20px);
+  font-weight: 400;
+  margin: 0
+}
+
+h5,
+.h5 {
+  @include font-size(18px);
+  font-weight: 400;
+  margin: 0
+}
+
+h6,
+.h6 {
+  @include font-size(16px);
+  font-weight: 400;
+  margin: 0
+}
+
+a {
+  text-decoration: none;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blinking 300ms !important;
+  -webkit-animation: blinking 300ms !important;
+  background-color: #ffc01a !important;
+}
+
+@keyframes blinking {
+  100% {
+    background-color: #ffc01a !important;
+  }
+}
+
+.moving-text:hover {
+  animation-play-state: paused;
+}
+
+/* The animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* media query to enable animation for only those who want it */
+@media (prefers-reduced-motion: no-preference) {
+  .moving-text {
+    animation: marquee 30s linear infinite;
+  }
+}
+
+.bet-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $xlt-gray;
+  align-content: flex-start;
+
+  @include media-breakpoint-down(xl) {
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include padding(10px);
+  }
+}
+
+.form-control,
+.form-select {
+    background-color: $white !important;
+    color: $black !important;
+    border-color: $gray-d !important;
+    padding: 5px;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-control:hover,
+.form-select:hover,
+.form-control:active,
+.form-select:active {
+    box-shadow: none;
+    border-color: $gray-b !important;
+}
+
+/*Table*/
+
+.table {
+  background-color: $xlt-gray;
+  color: $dark-gray;
+  margin-bottom: 0;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: $gray-c;
+}
+
+.table tbody th {
+  background-color: $gray-c;
+}
+
+.table tbody tr {
+  background-color: $gray-c;
+  border-color: $gray-c;
+}
+
+.form-check-input:checked {
+  background-color: $branding2;
+  border-color: $branding2;
+}
+
+.table tbody {
+  border: 0 !important;
+}
+
+.table th {
+  font-size: 14px;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 2px 8px;
+  vertical-align: middle;
+}
+
+.table td:first-child,
+.table th:first-child {
+  padding-left: 10px;
+}
+
+.modal .table td,
+.modal .table th {
+  padding: 5px;
+  font-size: 16px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.bet-table-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid $gray-c;
+  border-top: 1px solid $gray-c;
+  padding: 5px 0;
+
+  @include media-breakpoint-down(xl) {
+    display: none;
+  }
+}
+
+.bet-table-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.bet-table-row {
+  width: 100%;
+  border-bottom: 1px solid $gray-c;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $xlt-gray;
+
+  @include media-breakpoint-down(xl) {
+    padding-bottom: 5px;
+    flex-wrap: wrap;
+  }
+}
+
+.bet-nation-name {
+  width: 64%;
+  padding: 0 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(xl) {
+    width: 100%;
+  }
+}
+
+.bet-nation-name .bet-nation-game-name {
+  max-width: calc(100% - 210px);
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: $dark-gray;
+
+  @include media-breakpoint-down(xl) {
+    max-width: calc(100% - 120px);
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .bet-nation-game-name span {
+    width: 100%;
+    display: block;
+    line-height: normal;
+  }
+
+  .bet-nation-game-name span:first-child {
+    font-weight: bold;
+  }
+
+  .bet-nation-game-name span:last-child {
+    font-size: 12px;
+  }
+}
+
+.bet-nation-name .game-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 210px;
+
+  @include media-breakpoint-down(xl) {
+    width: 120px;
+  }
+}
+
+.bet-nation-name .game-icons .game-icon {
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-breakpoint-down(xl) {
+    width: 20px;
+  }
+}
+
+.bet-nation-name .game-icons .game-icon .active {
+  background-color: #28a745;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+
+  @include media-breakpoint-down(xl) {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+.bet-nation-name .game-icons .game-icon i {
+  @include media-breakpoint-down(xl) {
+    font-size: 10px;
+  }
+}
+
+.bet-nation-name .game-icons .game-icon img {
+  height: 12px;
+
+  @include media-breakpoint-down(xl) {
+    height: 10px;
+  }
+}
+
+.bet-nation-odd {
+  width: 12%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 14px;
+
+  @include media-breakpoint-down(xl) {
+    width: 33.33%;
+  }
+}
+
+.bet-nation-odd .odd-box {
+  width: 50%;
+  padding: 1px;
+}
+
+.bet-nation-odd .odd-box .bet-odd {
+  font-size: 14px;
+  color: #273a47;
+}
+
+.casino-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.casino-list-item {
+  width: calc(14.28% - 10px);
+  width: calc(10% - 10px);
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+
+  @include media-breakpoint-down(xl) {
+    width: calc(16.66% - 10px);
+  }
+
+  @include media-breakpoint-down(md) {
+    width: calc(25% - 10px);
+  }
+}
+
+.casino-list-item-ourvirtual {
+  width: calc(14.28% - 10px);
+  width: calc(10% - 10px);
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+
+  @include media-breakpoint-down(xl) {
+    width: calc(16.66% - 10px);
+  }
+
+  @include media-breakpoint-down(md) {
+    width: calc(33% - 10px);
+  }
+}
+
+
+.casino-list-item.rect {
+  width: calc(16.66% - 10px);
+}
+
+.casino-list-item .casino-list-item-banner {
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.casino-list-item.rect .casino-list-item-banner {
+  padding-top: 53.33%;
+}
+
+.suspended-box {
+  position: relative;
+  pointer-events: none;
+  cursor: none;
+}
+
+.suspended-box::before {
+  background-image: url("../assets/svg/lock.svg");
+  background-size: 17px 17px;
+  filter: invert(1);
+  -webkit-filter: invert(1);
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  pointer-events: none;
+}
+
+.suspended-box::after {
+  content: "";
+  background-color: $branding3;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  cursor: not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.suspended-row {
+  position: relative;
+  /* pointer-events: none;
+    cursor: none; */
+}
+
+.suspended-row::after {
+  content: attr(data-title);
+  background-color: $branding3;
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: absolute;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  top: 0;
+  cursor: not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.suspended-table {
+  position: relative;
+}
+
+.suspended-table::after {
+  content: attr(data-title);
+  background-color: $branding3;
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  top: 0;
+  cursor: not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+
+.modal-header {
+  @include padding(10px);
+  background: $branding1;
+  color: $white;
+  border-radius: 0;
+  border: 0;
+
+  .btn-close {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    opacity: 1;
+    box-shadow: none;
+  }
+}
+
+.card {
+  box-shadow: 0 0 5px #a4a4a4;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-header {
+  background-color: $branding2;
+  color: $white;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+/*Pagination*/
+
+.page-link {
+  color: $black;
+}
+
+.page-item.active .page-link {
+  background-color: $branding2;
+  border-color: $branding2;
+}
+
+
+.back {
+  background-color: $blue !important;
+}
+
+.back1 {
+  background-color: $blue-1 !important;
+}
+
+.back2 {
+  background-color: $blue-2 !important;
+}
+
+.lay {
+  background-color: $lay !important;
+}
+
+.lay1 {
+  background-color: $lay-1 !important;
+}
+
+.lay2 {
+  background-color: $lay-2 !important;
+}
+
+
+.btn-info {
+  background-color: var(--bg-info);
+  color: #fff;
+  border-color: var(--bg-info);
+}
+
+
+.casino-list-item2 {
+  width: calc(14.28% - 10px);
+  width: calc(20% - 10px);
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+
+  @include media-breakpoint-down(xl) {
+    width: calc(16.66% - 10px);
+  }
+
+  @include media-breakpoint-down(md) {
+    width: calc(50% - 10px);
+  }
+}
+
+
+.casino-list-item2.rect {
+  width: calc(16.66% - 10px);
+}
+
+.casino-list-item2 .casino-list-item2-banner {
+  padding-top: 50%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.casino-list-item2.rect .casino-list-item2-banner {
+  padding-top: 53.33%;
+}
