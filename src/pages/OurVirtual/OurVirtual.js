@@ -58,7 +58,7 @@ class OurVirtual extends Component {
     this.setState({ loginPopUp: !returningUser })
 
     let data = { "limit": 50, "pageno": 1 }
-    const sportListResponse = fetch("https://bigbetexchange.com/api/v5/getSportOuterList", {
+    const sportListResponse = fetch("https://triupatiexch.com/api/v5/getSportOuterList", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -79,7 +79,7 @@ class OurVirtual extends Component {
       "Authorization": authHeader().Authorization
     });
 
-    const betListRes = fetch("https://bigbetexchange.com/api/v5/inplay-event", {
+    const betListRes = fetch("https://triupatiexch.com/api/v5/inplay-event", {
       method: "POST",
       headers: header,
       body: JSON.stringify(matchListReqData)

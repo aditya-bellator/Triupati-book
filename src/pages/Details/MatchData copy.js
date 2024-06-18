@@ -39,7 +39,7 @@ class MatchData extends Component {
     console.log('lllllllllllllkkkkk......', sport_id, series_id, match_id, market_id);
 
 
-    // const matchDetailsRes = fetch("https://bigbetexchange.com/api/v5/get-cricket-detail", {
+    // const matchDetailsRes = fetch("https://triupatiexch.com/api/v5/get-cricket-detail", {
     //   method: "POST",
     //   body: JSON.stringify(matchListReqData),
     //   headers: {

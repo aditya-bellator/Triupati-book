@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 //scss
 import style from "./Header.module.scss";
 import styleMain from "../../Main.module.scss";
-import unclelogo from "../../assets/png/Hero_Book_Exchanges_Logo.png";
+import unclelogo from "../../assets/png/Hero_Book_Exchanges_Logo.jpg";
 //components
 import { authHeader } from '../../_helpers';
 import Input from "../Input/Input";
@@ -48,7 +48,7 @@ const Header = () => {
       "Authorization": authHeader().Authorization
     });
 
-    const betListRes = fetch("https://bigbetexchange.com/api/v5/event-detals", {
+    const betListRes = fetch("https://triupatiexch.com/api/v5/event-detals", {
       method: "POST",
       headers: header,
       body: JSON.stringify(matchListReqData)
@@ -61,7 +61,7 @@ const Header = () => {
     dispatch(userActions.getCoinBalance());
 
     let data = { "limit": 50, "pageno": 1 }
-    const sportListResponse = fetch("https://bigbetexchange.com/api/v5/getSportOuterList", {
+    const sportListResponse = fetch("https://triupatiexch.com/api/v5/getSportOuterList", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -150,7 +150,7 @@ const Header = () => {
       'Content-Type': 'application/json',
       "Authorization": authHeader().Authorization
     });
-    const betListRes = fetch("https://bigbetexchange.com/api/v5/event-detals", {
+    const betListRes = fetch("https://triupatiexch.com/api/v5/event-detals", {
       method: "POST",
       headers: header,
       body: JSON.stringify(matchListReqData)

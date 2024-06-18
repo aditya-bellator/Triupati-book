@@ -14,7 +14,7 @@ const YourComponent = () => {
       "Authorization": authHeader().Authorization
     });
 
-    const betListRes = fetch("https://bigbetexchange.com/api/v5/event-detals", {
+    const betListRes = fetch("https://triupatiexch.com/api/v5/event-detals", {
       method: "POST",
       headers: header,
       body: JSON.stringify(reqBody)

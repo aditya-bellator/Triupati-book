@@ -39,7 +39,7 @@ export default function Main() {
     setShow(!returningUser);
 
     let data = { "limit": 50, "pageno": 1 }
-    const responseData = fetch("https://bigbetexchange.com/api/v5/getSportOuterList", {
+    const responseData = fetch("https://triupatiexch.com/api/v5/getSportOuterList", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -58,7 +58,7 @@ export default function Main() {
 
     let matchListReqData = { "limit": 20, "pageno": 1, "sport_id": 0, "series_id": 0 }
 
-    const matchListResponse = fetch("https://bigbetexchange.com/api/v5/getseiresMatchsList", {
+    const matchListResponse = fetch("https://triupatiexch.com/api/v5/getseiresMatchsList", {
       method: "POST",
       body: JSON.stringify(matchListReqData),
       headers: {

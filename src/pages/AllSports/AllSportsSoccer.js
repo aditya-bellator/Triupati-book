@@ -13,7 +13,7 @@ export default function AllSports() {
   useEffect(() => {
     let sportIdWiseReqData = { "limit": 20, "pageno": 1, "sport_id": sport_id, "series_id": 0, "type": "home" }
 
-    const sportIdWiseResponse = fetch("https://bigbetexchange.com/api/v5/getseiresMatchsList", {
+    const sportIdWiseResponse = fetch("https://triupatiexch.com/api/v5/getseiresMatchsList", {
       method: "POST",
       body: JSON.stringify(sportIdWiseReqData),
       headers: {

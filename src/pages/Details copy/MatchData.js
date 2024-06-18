@@ -19,16 +19,16 @@ class MatchData extends Component {
 
     console.log('lllllllllllllkkkkk......', sport_id, series_id, match_id, market_id);
 
-    // https://bigbetexchange.com/api/v5/get-cricket-detail
+    // https://triupatiexch.com/api/v5/get-cricket-detail
     // {"match_id":"32902230","sport_id":"4"}
 
-    // https://bigbetexchange.com/api/v5/get-match-session?match_id=32902230
+    // https://triupatiexch.com/api/v5/get-match-session?match_id=32902230
     // https://score.jeoad.com/api/v1/getScore?matchId=32902230
 
 
     let matchListReqData = { "match_id": match_id, "sport_id": sport_id }
 
-    const matchDetailsRes = fetch("https://bigbetexchange.com/api/v5/get-cricket-detail", {
+    const matchDetailsRes = fetch("https://triupatiexch.com/api/v5/get-cricket-detail", {
       method: "POST",
       body: JSON.stringify(matchListReqData),
       headers: {
@@ -42,7 +42,7 @@ class MatchData extends Component {
     })
 
 
-    const matchSessionRes = fetch(`https://bigbetexchange.com/api/v5/get-match-session?match_id=${match_id}`, {
+    const matchSessionRes = fetch(`https://triupatiexch.com/api/v5/get-match-session?match_id=${match_id}`, {
       method: "GET",
       // body: JSON.stringify(matchListReqData),
       headers: {
@@ -86,7 +86,7 @@ class MatchData extends Component {
     // console.log('lllllllllllllkkkkk......', sport_id, series_id, match_id, market_id);
     let matchListReqData = { "match_id": match_id, "sport_id": sport_id }
 
-    const matchDetailsRes = fetch("https://bigbetexchange.com/api/v5/get-cricket-detail", {
+    const matchDetailsRes = fetch("https://triupatiexch.com/api/v5/get-cricket-detail", {
       method: "POST",
       body: JSON.stringify(matchListReqData),
       headers: {
@@ -99,7 +99,7 @@ class MatchData extends Component {
       });
     })
 
-    const matchSessionRes = fetch(`https://bigbetexchange.com/api/v5/get-match-session?match_id=${match_id}`, {
+    const matchSessionRes = fetch(`https://triupatiexch.com/api/v5/get-match-session?match_id=${match_id}`, {
       method: "GET",
       headers: {
         'Accept': 'application/json',

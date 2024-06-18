@@ -18,7 +18,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     let data = { "limit": 50, "pageno": 1 }
-    const responseData = fetch("https://bigbetexchange.com/api/v5/getSportOuterList", {
+    const responseData = fetch("https://triupatiexch.com/api/v5/getSportOuterList", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

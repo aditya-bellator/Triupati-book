@@ -40,7 +40,7 @@ class CurrentBet extends Component {
       "Authorization": authHeader().Authorization
     });
 
-    const betListRes = fetch("https://bigbetexchange.com/api/v5/my-bet-list", {
+    const betListRes = fetch("https://triupatiexch.com/api/v5/my-bet-list", {
       method: "POST",
       headers: header,
       body: JSON.stringify(myBetReq)
@@ -89,7 +89,7 @@ class CurrentBet extends Component {
       "Authorization": authHeader().Authorization
     });
 
-    const betListRes = fetch("https://bigbetexchange.com/api/v5/my-bet-list", {
+    const betListRes = fetch("https://triupatiexch.com/api/v5/my-bet-list", {
       method: "POST",
       headers: header,
       body: JSON.stringify(data)
@@ -155,7 +155,7 @@ class CurrentBet extends Component {
       "Authorization": authHeader().Authorization
     });
 
-    const betListRes = fetch("https://bigbetexchange.com/api/v5/my-bet-list", {
+    const betListRes = fetch("https://triupatiexch.com/api/v5/my-bet-list", {
       method: "POST",
       headers: header,
       body: JSON.stringify(myBetReq)
